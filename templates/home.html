@@ -1,0 +1,56 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Machine failure predictor</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="POST">
+        <h4>Email: saptarshi.pal1@gmail.com</h4>
+        <div class="mb-3">
+            <label class="form-label">Type</label>
+            <select class="form-control" type = "number" name="Product Type" placeholder="Enter the Product Type" required>
+                <option class="placeholder" selected disabled value="">Select the Product Type</option>
+                <option value= 0 >
+                    L
+                </option>
+                <option value= 1>
+                    M
+                </option>
+                <option value= 2>
+                    H
+                </option>
+            </select><br><br>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Air temperature</label>
+            <input class="form-control" type="number" name="Air temperature"
+                placeholder="Enter the Air temperature (0-500 K)" min='0' max='500' /><br><br>
+        </div>
+        <div class="mb-3">  
+            <label class="form-label">Process temperature</label>
+            <input class="form-control" type="number" name="Process temperature"
+                placeholder="Enter the Process temperature (0-500 K)" min='0' max='500' /><br><br>
+        </div>
+        <div class="mb-3">  
+            <label class="form-label">Rotational speed</label>
+            <input class="form-control" type="number" name="Rotational speed"
+                placeholder="Enter the Rotational speed (0-5000 rpm)" min='0' max='5000' /><br><br>
+        </div>
+        <div class="mb-3">  
+            <label class="form-label">Torque</label>
+            <input class="form-control" type="number" name="Torque"
+                placeholder="Enter the Torque (0-500 Nm)" min='0' max='500' /><br><br>
+        </div>
+        <div class="mb-3">  
+            <label class="form-label">Tool wear</label>
+            <input class="form-control" type="number" name="Tool wear"
+                placeholder="Enter the Tool wear (0-500 min)" min='0' max='500' /><br><br>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict the Machine failure" required /><br><br>
+        </div>
+    </form>
+    <h2>
+       The prediction is {{results}}
+    </h2>
+   <body>
+</html>
