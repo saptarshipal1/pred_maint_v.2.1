@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 from flask import Flask,request,render_template
 from model_files.model import custom_df,data_imputer,scale_transf,final_model
 
-df = pd.read_csv('/Users/saptarshipal/Documents/data/pred_maint_v.2.1/pred_maint_v.2.1/data/ai4i2020.csv')
+df = pd.read_csv('setup.py')
 
 app = Flask(__name__,template_folder='templates')
 
