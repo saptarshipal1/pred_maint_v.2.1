@@ -24,9 +24,6 @@ from sklearn.ensemble import RandomForestClassifier
 import warnings
 warnings.filterwarnings('ignore')
 
-
-
-
 df = pd.read_csv('saptarshipal1/pred_maint_v.2.1/data/ai4i2020.csv')
 
 def custom_df(df):
